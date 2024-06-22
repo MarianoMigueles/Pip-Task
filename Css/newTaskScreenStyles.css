@@ -1,0 +1,45 @@
+main.completed {
+    min-height: 100vh;
+
+    background-image: url(../Assets/Animations/VauldBoyLike.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------
+# Left Container
+-----------------------*/
+
+#new-task-screen.task-form {
+    width: 27rem;
+    height: 28rem; 
+}
+
+#new-task-screen #task-form-title, #new-task-screen #task-form-input {
+    border: 3px solid var(--clr-Primary);
+    padding: 10px;
+} 
+
+#new-task-screen .btn-container {
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/*-----------------------
+# Right Container
+-----------------------*/
+
+.map-image-container {
+    opacity: 0.5;
+    width: 80%;
+    height: 50%;
+
+    border-radius: 20px;
+
+    background-image: url(../Assets/Images/Map.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

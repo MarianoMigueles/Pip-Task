@@ -1,0 +1,194 @@
+/*-----------------------
+# Left Container
+-----------------------*/
+
+.container { 
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: calc(100vh - var(--nav-height) - 45px);
+}
+
+.task-list {
+    position: relative;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 2.7rem;
+    margin-top: 5rem;
+}
+
+.task-list::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 70%;
+    height: 5px;
+
+    background-color: var(--clr-Primary);
+
+    z-index: 100;
+}
+
+.tasks-container.center-elements {
+    flex-direction: column;
+    flex: 2;
+    gap: 3px;
+
+    justify-content: flex-start;
+
+    width: 100%;
+    max-height: 13rem;
+    color: var(--clr-Primary);
+
+    list-style: none;
+}
+
+.tasks-container li {
+    position: relative;
+    min-width: 80%;
+    max-width: 80%;
+
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+.tasks-container.not-found {
+    justify-content: center;
+    opacity: 70%;
+}
+
+.tasks-container .not-found {
+    max-width: 70%;
+    text-align: center;
+
+    padding: 20px;
+    border: 3px solid var(--clr-Primary);
+}
+
+.task.center-elements {
+    position: relative;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 100%;
+}
+
+.task-info {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    max-width: calc(100% - 4rem);
+    min-width: calc(100% - 4rem);
+}
+
+.task-info p, .task-info small {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.task-info small {
+    font-size: 1rem;
+    margin-left: 15px;
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--clr-Primary);
+}
+
+/*-----Pennding Tasks-----*/
+
+#pending-tasks {
+    max-height: 15rem;
+    overflow: overlay;
+    z-index: 0;
+}
+
+#pending-tasks li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0.8rem;
+    transform: translateY(-50%);
+
+    width: 0.5rem;
+    height: 0.5rem;
+
+    background-color: var(--clr-Primary);
+}
+
+#pending-tasks li:hover, #pending-tasks li.active {
+    background-color: var(--clr-Primary);
+    color: var(--clr-Secondary);
+}
+
+#pending-tasks li:hover::before, #pending-tasks li.active::before {
+    background-color: var(--clr-Secondary);
+}
+
+#pending-tasks li:hover .icon, #pending-tasks li.active .icon {
+    color: var(--clr-Secondary);
+}
+
+/*-----Completed Tasks-----*/
+
+#completed-tasks {
+    position: relative;
+    max-height: 13rem;
+
+    overflow: auto;
+
+    z-index: 0;
+}
+
+#completed-tasks li, .task.completed {
+    list-style: none;
+    opacity: 70%;
+}
+
+#completed-tasks li:hover {
+    background-color: var(--clr-Primary);
+    color: var(--clr-Secondary);
+}
+
+#completed-tasks li:hover .icon {
+    color: var(--clr-Secondary);
+}
+
+/*-----------------------
+# Right Container
+-----------------------*/
+
+/*-----Task Form-----*/
+
+#task-list-screen.task-form {
+    width: 27rem;
+    height: 22rem;
+}
+
+#task-list-screen.closed {
+    background-image: url(../Assets/Animations/VaultBoyReading.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#task-list-screen.closed.completed {
+    background-image: url(../Assets/Animations/VauldBoyLike.gif);
+}
+
+
+.task-form.closed #btn-close-task-form,
+ .task-form.closed #task-form-input,
+  .task-form.closed .task-form-footer,
+  .task-form.closed #task-form-title {
+    display: none;
+}
