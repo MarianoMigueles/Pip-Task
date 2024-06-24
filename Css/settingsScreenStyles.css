@@ -1,0 +1,93 @@
+/*-----------------------
+# Left Container
+-----------------------*/
+
+.settings-container {
+    flex-direction: column;
+    gap: 2.7rem;
+}
+
+.settings-container h1 {
+    font-size: inherit, 1.5rem;
+}
+
+.voice-test-container.center-elements {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2.7rem;
+}
+
+.voice-test {
+    gap: 10px;
+}
+
+.voice-test-options {
+    position: relative;
+}
+
+.voice-test-options::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--clr-Primary); 
+    top: 50%; 
+    right: 3%; 
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.voice-test-options::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: var(--clr-Primary);
+    top: 0; 
+    right: 11%; 
+    pointer-events: none;
+}
+
+#lang-options-container::after {
+    right: 30%;
+}
+
+#lang-options-container::before {
+    right: 7%;
+}
+
+.voice-test-options select {
+    width: 100%;
+    height: 100%;
+
+    border: 3px solid var(--clr-Primary);
+    padding: 10px 60px 10px 10px;
+}
+
+#volume-range-container {
+    width: 100%;
+}
+
+#volume-range {
+    appearance: none;
+    -webkit-appearance: none;
+    background: #080e09;
+
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+}
+
+#volume-range::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--clr-Primary);
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
