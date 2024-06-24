@@ -114,7 +114,7 @@ export function playSound(soundName) {
     let sound;
     switch (soundName) {
         case 'changeScreen': 
-            sound = new Audio('../Assets/Sounds/ChangeScreenFalloutSound.mp3');
+            sound = new Audio('Assets/Sounds/ChangeScreenFalloutSound.mp3');
             sound.play();
             break;
         case 'OnKeyPress':
