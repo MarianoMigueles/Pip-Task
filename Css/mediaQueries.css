@@ -10,6 +10,14 @@
         padding: 0 25px 25px 25px;
     }
 
+    html body nav.center-elements {
+        padding: 0 5px;
+    }
+
+    nav.center-elements a {
+        font-size: 0.8rem;
+    }
+
     nav.center-elements::after, nav.center-elements::before {
         height: 3px;
     }
