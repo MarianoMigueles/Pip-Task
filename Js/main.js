@@ -118,11 +118,11 @@ export function playSound(soundName) {
             sound.play();
             break;
         case 'OnKeyPress':
-            sound = new Audio('../Assets/Sounds/KeyFalloutSound.mp3');
+            sound = new Audio('Assets/Sounds/KeyFalloutSound.mp3');
             sound.play();
             break;
         case 'TaskCompleted':
-            sound = new Audio('../Assets/Sounds/FalloutLikeSound.mp3');
+            sound = new Audio('Assets/Sounds/FalloutLikeSound.mp3');
             sound.play();
             break;
     }
