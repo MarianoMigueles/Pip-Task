@@ -5,7 +5,7 @@
 This project is based entirely on ***HTML - CSS - JAVASCRIPT.***
 
 ### Prototipe - 👀
-[Pip-task]([https://github.com/mobilepadawan/Speakit-JS/?tab=readme-ov-file#how-to-use-it](https://marianomigueles.github.io/Pip-Task/)) 
+[Pip-task](https://marianomigueles.github.io/Pip-Task/) 
 
 ## About 
 This project aims to create a task generator where you can perform basic CRUD operations using the MoakApi.com API. Additionally, it integrates the [*Speakit-JS*](https://github.com/mobilepadawan/Speakit-JS/?tab=readme-ov-file#how-to-use-it) library, allowing you to listen your task descriptions.
